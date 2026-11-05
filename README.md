@@ -3,7 +3,7 @@
 Assistente de perguntas e respostas sobre temas bancários (Pix, débito, crédito, Open Finance) que responde **somente** com base em uma base de conhecimento própria e diz "não sei" quando a informação não está nela.
 
 ## Como funciona
-1. Lê o arquivo faq.txt (base de conhecimento).
+1. Lê o arquivo `faq.txt` (base de conhecimento).
 2. Recebe a pergunta no terminal.
 3. Envia ao modelo Gemini a pergunta junto com a base, com a regra de responder só com essas informações.
 
@@ -11,18 +11,28 @@ Assistente de perguntas e respostas sobre temas bancários (Pix, débito, crédi
 Python, API do Gemini (google-genai)
 
 ## Como rodar
-Instalar o Python, pip install google-genai, criar a chave no Google AI Studio, guardar em GEMINI_API_KEY, rodar python teste.py]
+1. Instale o Python.
+2. Instale a biblioteca: `pip install google-genai`
+3. Crie uma chave de API no Google AI Studio.
+4. Guarde a chave na variável de ambiente `GEMINI_API_KEY`.
+5. Rode: `python teste.py`
 
 ## Exemplos
-Pergunta: Qual a difrença de crédito e débito?
-Resposta: Débito: Quando o pagamento é realizado no débito, significa que a pessoa pagou com o dinheiro que tinha na conta e a tranação ocorre de forma imediata.
-          Crédito: Quando o pagamento é realizado no crédito, significa empréstimo de curto prazo feito pelo banco. Você gasta um limite concedido pela instituição e paga o total acumulado depois (na fatura), podendo parcelar
 
+```
+Pergunta: Qual a diferença de crédito e débito?
+Resposta: Débito: o pagamento é feito com o dinheiro que a pessoa tinha na conta e a transação ocorre de forma imediata.
+Crédito: é um empréstimo de curto prazo feito pelo banco, em que se gasta um limite concedido e se paga o total depois, na fatura, podendo parcelar.
+```
+
+```
 Pergunta: Qual a capital da França?
 Resposta: Não sei.
+```
 
 ## Limitações
-A qualidade da resposta depende da base de conhecimento. Informações devem ser revisadas e datadas.
+A qualidade da resposta depende da base de conhecimento. As informações devem ser revisadas e datadas.
 
 ## Próximos passos
-Colocar mais informações, esse foi só um pequeno projeto, futuramente pretendo deixar mais informativo.
+- Buscar apenas os trechos mais relevantes da base (embeddings), em vez de enviar o arquivo inteiro
+- Ampliar a base com novos temas, sempre com fonte e data
