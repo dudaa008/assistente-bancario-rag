@@ -25,4 +25,4 @@ Resposta: Não sei.
 A qualidade da resposta depende da base de conhecimento. Informações devem ser revisadas e datadas.
 
 ## Próximos passos
-Colocar mais informações, esse foi só um pequeno projeto para, futuramente pretendo deixar mais informativo.
+Colocar mais informações, esse foi só um pequeno projeto, futuramente pretendo deixar mais informativo.
